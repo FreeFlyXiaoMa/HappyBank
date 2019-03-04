@@ -66,5 +66,5 @@ test=data.loc[data['source']=='test']
 train.drop(['source'],axis=1,inplace=True)
 test.drop(['source','Disbursed'],axis=1,inplace=True)
 #print('train.head()',train.head())
-train.to_csv('Bank_FE_rain.csv',index=False)
+train.to_csv('Bank_FE_train.csv',index=False)
 test.to_csv('BankFE_test.csv',index=False)
