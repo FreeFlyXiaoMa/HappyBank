@@ -22,7 +22,7 @@ kfold=StratifiedKFold(n_splits=5,shuffle=True,random_state=3)
 def get_n_estimators(params,X_train_1,y_trian_1,early_stopping_rounds=10):
     lgbm_params=params.copy()
    # y_trian_1.astype(float)
-    dataset=lgbm.Dataset
+    #dataset=lgbm.Dataset
 
     lgbmtrain=lgbm.Dataset(X_train_1,y_trian_1)
     cv_result=lgbm.cv(lgbm_params,lgbmtrain,num_boost_round=MAX_ROUNDS,early_stopping_rounds=early_stopping_rounds,seed=3,nfold=5,
